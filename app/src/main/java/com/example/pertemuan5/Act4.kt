@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.input.TextFieldLineLimits
 import androidx.compose.material3.Divider
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -84,9 +85,9 @@ fun FormDataDiri(modifier: Modifier) {
                 bottom = dimensionResource(R.dimen.padding_medium),
                 top = dimensionResource(
                     id = R.dimen.padding_medium
-                ),
-            ), // ditambah: kurung penutup padding
-            thickness = dimensionResource(1dp), // ditambah: koma
+                )
+            ),
+            thickness = dimensionResource(1dp),
             color = Color.DarkGray
         )
 
@@ -107,8 +108,8 @@ fun FormDataDiri(modifier: Modifier) {
                 bottom = dimensionResource(R.dimen.padding_medium),
                 top = dimensionResource(
                     id = R.dimen.padding_medium
-                ),
-            ), // ditambah: kurung penutup padding
+                )
+            ),
             thickness = dimensionResource(1dp),
             color = Color.DarkGray
         )
@@ -122,7 +123,11 @@ fun FormDataDiri(modifier: Modifier) {
                 .height(100.dp)
                 .width(300.dp)
         ) {
-
+          Column (modifier = Modifier.padding(horizontall =5.dp, verticall = 15.dp) ){
+              Text(text = "Nama : "+nama, color = Color.white)
+              Text(text = "Alamat : "+alamat, color = Color.white)
+              Text(text = "Jenis Kelamin : "+jenis, color = Color.white)
+            }
         }
     }
 }
