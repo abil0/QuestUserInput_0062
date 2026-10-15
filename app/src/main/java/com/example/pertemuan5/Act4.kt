@@ -2,8 +2,14 @@ package com.example.pertemuan5
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlexDirection.Companion.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.input.TextFieldLineLimits
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -11,6 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun FormDataDiri(modifier : Modifier){
@@ -37,8 +44,11 @@ fun FormDataDiri(modifier : Modifier){
 
         Row{
             gender.forEach{ item ->
+                Row(modifier = Modifier.selectable(
+                    selected = textJK == item,
+                    onClick = { textJK = item }
+                ),
 
-            }
         }
     }
 
