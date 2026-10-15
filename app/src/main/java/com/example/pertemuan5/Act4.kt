@@ -25,18 +25,21 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun FormDataDiri(modifier : Modifier){
+fun FormDataDiri(modifier: Modifier) {
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
     var textJK by remember { mutableStateOf("") }
-    val gender:List<String> = listOf("Laki-laki", "Perempuan")
+    val gender: List<String> = listOf("Laki-laki", "Perempuan")
 
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
     var jenis by remember { mutableStateOf("") }
-    Column(modifier = Modifier.padding(top = 50.dp),
+
+    Column(
+        modifier = Modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally ) {
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         OutlinedTextField(
             value = textNama,
             SingleLine = true,
@@ -44,44 +47,53 @@ fun FormDataDiri(modifier : Modifier){
             modifier = Modifier.width(250.dp),
             label = { Text(text = "Nama Lengkap") },
             onValueChange = {
-                textNama = it }
+                textNama = it
+            }
         )
 
-        Row{
-            gender.forEach{ item ->
-                Row(modifier = Modifier.selectable(
-                    selected = textJK == item,
-                    onClick = { textJK = item }
-                ), verticalAlignment = Alignment.CenterVertically)
-                {
-                    RadioButton(selected = textJK == item,
-                        onClick = {textJK = item}
+        Row {
+            gender.forEach { item ->
+                Row(
+                    modifier = Modifier.selectable(
+                        selected = textJK == item,
+                        onClick = { textJK = item }
+                    ),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = textJK == item,
+                        onClick = { textJK = item }
                     )
                     Text(item)
                 }
             }
         }
+
         OutlinedTextField(
             value = textAlamat,
             singleLine = true,
             modifier = Modifier.width(250.dp),
-            label = { Text ("Alamat") },
+            label = { Text("Alamat") },
             onValueChange = {
-                textAlamat = it }
+                textAlamat = it
+            }
         )
+
         Divider(
-            modifier = Modifier.padding(bottom =
-                dimensionResource(R.dimen.padding_medium), top = dimensionResource(R.dimen.padding_medium),
-                id = R.dimen.padding_medium
-            )),
-        thickness = dimensionResource(1dp)
-        color = Color.DarkGray
+            modifier = Modifier.padding(
+                bottom = dimensionResource(R.dimen.padding_medium),
+                top = dimensionResource(
+                    id = R.dimen.padding_medium
+                ),
+            ), // ditambah: kurung penutup padding
+            thickness = dimensionResource(1dp), // ditambah: koma
+            color = Color.DarkGray
         )
 
         Button(
             modifier = Modifier.fillMaxWidth(1f),
             enabled = textNama.isNotEmpty(),
-            onClick ={
+            onClick = {
                 nama = textNama
                 alamat = textAlamat
                 jenis = textJK
@@ -89,10 +101,29 @@ fun FormDataDiri(modifier : Modifier){
         ) {
             Text(stringResource("Submit"))
         }
+
+        Divider(
+            modifier = Modifier.padding(
+                bottom = dimensionResource(R.dimen.padding_medium),
+                top = dimensionResource(
+                    id = R.dimen.padding_medium
+                ),
+            ), // ditambah: kurung penutup padding
+            thickness = dimensionResource(1dp),
+            color = Color.DarkGray
+        )
+
+        ElevatedCard(
+            elevation = CardDefaults.cardElevation(
+                defaultElevation = 10.dp
+            ),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            modifier = Modifier
+                .height(100.dp)
+                .width(300.dp)
+        ) {
+
+        }
     }
-
-
-
-
 }
 
