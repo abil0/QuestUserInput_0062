@@ -1,5 +1,6 @@
 package com.example.pertemuan5
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -17,6 +18,9 @@ fun FormDataDiri(modifier : Modifier){
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
     var jenis by remember { mutableStateOf("") }
+    Column(modifier = Modifier.padding(top = 50.dp),
+
+
 
 
 }
