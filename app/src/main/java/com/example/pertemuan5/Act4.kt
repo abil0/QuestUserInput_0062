@@ -77,6 +77,15 @@ fun FormDataDiri(modifier : Modifier){
         color = Color.DarkGray
         )
 
+        Button(
+            modifier = Modifier.fillMaxWidth(1f),
+            enabled = textNama.isNotEmpty(),
+            onClick ={
+                nama = textNama
+                alamat = textAlamat
+                jenis = textJK
+            }
+        )
 
 
         }
