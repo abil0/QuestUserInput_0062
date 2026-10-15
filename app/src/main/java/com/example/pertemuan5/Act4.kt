@@ -2,13 +2,16 @@ package com.example.pertemuan5
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.FlexDirection.Companion.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.text.input.TextFieldLineLimits
-import androidx.compose.material3.Divider
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.material3.Button
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -22,11 +25,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun FormDataDiri(modifier: Modifier) {
+fun FormDataDiri(modifier: Modifier = Modifier) {
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
     var textJK by remember { mutableStateOf("") }
@@ -37,13 +39,13 @@ fun FormDataDiri(modifier: Modifier) {
     var jenis by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier.padding(top = 50.dp),
+        modifier = modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         OutlinedTextField(
             value = textNama,
-            SingleLine = true,
+            singleLine = true,
             shape = MaterialTheme.shapes.large,
             modifier = Modifier.width(250.dp),
             label = { Text(text = "Nama Lengkap") },
@@ -80,14 +82,12 @@ fun FormDataDiri(modifier: Modifier) {
             }
         )
 
-        Divider(
+        HorizontalDivider(
             modifier = Modifier.padding(
                 bottom = dimensionResource(R.dimen.padding_medium),
-                top = dimensionResource(
-                    id = R.dimen.padding_medium
-                )
+                top = dimensionResource(id = R.dimen.padding_medium)
             ),
-            thickness = dimensionResource(1dp),
+            thickness = dimensionResource(R.dimen.divider_tipis),
             color = Color.DarkGray
         )
 
@@ -100,17 +100,15 @@ fun FormDataDiri(modifier: Modifier) {
                 jenis = textJK
             }
         ) {
-            Text(stringResource("Submit"))
+            Text("Submit")
         }
 
-        Divider(
+        HorizontalDivider(
             modifier = Modifier.padding(
                 bottom = dimensionResource(R.dimen.padding_medium),
-                top = dimensionResource(
-                    id = R.dimen.padding_medium
-                )
+                top = dimensionResource(id = R.dimen.padding_medium)
             ),
-            thickness = dimensionResource(1dp),
+            thickness = dimensionResource(R.dimen.divider_tipis),
             color = Color.DarkGray
         )
 
@@ -123,12 +121,11 @@ fun FormDataDiri(modifier: Modifier) {
                 .height(100.dp)
                 .width(300.dp)
         ) {
-          Column (modifier = Modifier.padding(horizontall =5.dp, verticall = 15.dp) ){
-              Text(text = "Nama : "+nama, color = Color.white)
-              Text(text = "Alamat : "+alamat, color = Color.white)
-              Text(text = "Jenis Kelamin : "+jenis, color = Color.white)
+            Column(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)) {
+                Text(text = "Nama : " + nama, color = Color.Black)
+                Text(text = "Alamat : " + alamat, color = Color.Black)
+                Text(text = "Jenis Kelamin : " + jenis, color = Color.Black)
             }
         }
     }
 }
-
