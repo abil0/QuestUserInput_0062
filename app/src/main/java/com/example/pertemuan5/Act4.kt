@@ -1,12 +1,15 @@
 package com.example.pertemuan5
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.input.TextFieldLineLimits
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
@@ -31,6 +34,12 @@ fun FormDataDiri(modifier : Modifier){
             onValueChange = {
                 textNama = it }
         )
+
+        Row{
+            gender.forEach{ item ->
+
+            }
+        }
     }
 
 
