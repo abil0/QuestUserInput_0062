@@ -187,3 +187,5 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                     }
                 }
             }
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_medium)))
+
