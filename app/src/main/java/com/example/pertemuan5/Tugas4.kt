@@ -127,3 +127,5 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                     modifier = Modifier.weight(1f)
                 )
             }
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_medium)))
+
