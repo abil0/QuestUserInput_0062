@@ -45,3 +45,4 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun FormMahasiswa(modifier: Modifier = Modifier) {
     var namaDepan by remember { mutableStateOf("") }
+    var namaBelakang by remember { mutableStateOf("") }
