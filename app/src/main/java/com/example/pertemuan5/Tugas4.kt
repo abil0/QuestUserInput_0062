@@ -50,3 +50,12 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
     var tglLahir by remember { mutableStateOf("") }
     var experience by remember { mutableStateOf("") }
     var showMenu by remember { mutableStateOf(false) }
+    var skillAndroid by remember { mutableStateOf(false) }
+    var skillUiux by remember { mutableStateOf(false) }
+    var skillWeb by remember { mutableStateOf(false) }
+
+    val listExperience = listOf(
+        stringResource(R.string.exp_beginner),
+        stringResource(R.string.exp_intermediate),
+        stringResource(R.string.exp_expert)
+    )
