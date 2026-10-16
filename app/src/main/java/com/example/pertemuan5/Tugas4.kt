@@ -65,4 +65,15 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
             email.isNotBlank() && tglLahir.isNotBlank() && experience.isNotBlank() &&
             (skillAndroid || skillUiux || skillWeb)
 
-
+    Box(modifier = modifier.fillMaxSize()) {
+        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            Image(
+                painter = painterResource(id = R.drawable.photo),
+                contentDescription = stringResource(R.string.cd_background),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(R.dimen.image_height))
+                    .padding(innerPadding)
+            )
+        }
