@@ -151,3 +151,21 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                             contentDescription = stringResource(R.string.cd_calendar)
                         )
                     },
+                    shape = fieldShape,
+                    modifier = Modifier.weight(1f)
+                )
+                Box(modifier = Modifier.weight(1f)) {
+                    OutlinedTextField(
+                        value = experience,
+                        onValueChange = {},
+                        readOnly = true,
+                        label = { Text(stringResource(R.string.label_experience)) },
+                        trailingIcon = {
+                            IconButton(onClick = { showMenu = true }) {
+
+                                }
+                            )
+                        }
+                    }
+                }
+            }
