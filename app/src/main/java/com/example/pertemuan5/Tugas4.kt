@@ -189,3 +189,8 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
             }
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_medium)))
 
+            Text(
+                text = stringResource(R.string.label_skill),
+                fontSize = dimensionResource(R.dimen.text_label).value.sp,
+                fontWeight = FontWeight.Bold
+            )
