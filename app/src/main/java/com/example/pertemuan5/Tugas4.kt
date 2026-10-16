@@ -59,3 +59,5 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
         stringResource(R.string.exp_intermediate),
         stringResource(R.string.exp_expert)
     )
+    val fieldShape = RoundedCornerShape(dimensionResource(R.dimen.field_corner))
+
