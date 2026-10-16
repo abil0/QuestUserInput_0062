@@ -88,3 +88,13 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                         topEnd = dimensionResource(R.dimen.card_corner)
                     )
                 )
+                .padding(dimensionResource(R.dimen.card_padding))
+        ) {
+            Text(
+                text = stringResource(R.string.form_title),
+                color = colorResource(R.color.purple_title),
+                fontSize = dimensionResource(R.dimen.text_title).value.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
+            )
