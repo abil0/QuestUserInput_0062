@@ -206,3 +206,19 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                         fontSize = dimensionResource(R.dimen.text_small).value.sp
                     )
                 }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(checked = skillUiux, onCheckedChange = { skillUiux = it })
+                    Text(
+                        text = stringResource(R.string.skill_uiux),
+                        fontSize = dimensionResource(R.dimen.text_small).value.sp
+                    )
+                }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(checked = skillWeb, onCheckedChange = { skillWeb = it })
+                    Text(
+                        text = stringResource(R.string.skill_web),
+                        fontSize = dimensionResource(R.dimen.text_small).value.sp
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_large)))
