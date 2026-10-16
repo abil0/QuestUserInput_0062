@@ -98,3 +98,13 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
+            Text(
+                    text = stringResource(R.string.form_subtitle),
+            color = colorResource(R.color.gray_text),
+            fontSize = dimensionResource(R.dimen.text_subtitle).value.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = dimensionResource(R.dimen.space_small))
+            )
+
