@@ -222,3 +222,14 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                 }
             }
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_large)))
+
+            Button(
+                onClick = { },
+                enabled = formValid,
+                shape = fieldShape,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(R.color.purple_title),
+                    contentColor = colorResource(R.color.white),
+                    disabledContainerColor = colorResource(R.color.button_disabled),
+                    disabledContentColor = colorResource(R.color.white)
+                ),
