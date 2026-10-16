@@ -129,3 +129,11 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
             }
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_medium)))
 
+            OutlinedTextField(
+                value = email,
+                onValueChange = { email = it },
+                label = { Text(stringResource(R.string.label_email)) },
+                singleLine = true,
+                shape = fieldShape,
+                modifier = Modifier.fillMaxWidth()
+            )
