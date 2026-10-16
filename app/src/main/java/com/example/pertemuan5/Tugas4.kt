@@ -77,3 +77,14 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                     .padding(innerPadding)
             )
         }
+        Column(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .background(
+                    color = colorResource(R.color.white),
+                    shape = RoundedCornerShape(
+                        topStart = dimensionResource(R.dimen.card_corner),
+                        topEnd = dimensionResource(R.dimen.card_corner)
+                    )
+                )
