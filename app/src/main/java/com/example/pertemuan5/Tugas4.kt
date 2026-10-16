@@ -243,5 +243,8 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
     }
 }
 
-
+@Preview(showBackground = true)
+@Composable
+fun FormMahasiswaPreview() {
+    FormMahasiswa()
 }
