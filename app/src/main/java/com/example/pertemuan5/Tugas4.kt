@@ -107,4 +107,6 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                 .fillMaxWidth()
                 .padding(vertical = dimensionResource(R.dimen.space_small))
             )
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_medium)))
+
 
