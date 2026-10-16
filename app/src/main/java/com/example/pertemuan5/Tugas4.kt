@@ -137,3 +137,5 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                 shape = fieldShape,
                 modifier = Modifier.fillMaxWidth()
             )
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_medium)))
+
