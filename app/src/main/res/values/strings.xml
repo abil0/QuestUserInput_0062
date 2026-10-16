@@ -19,4 +19,7 @@
     <string name="cd_background">Gambar latar belakang</string>
     <string name="cd_calendar">Pilih tanggal</string>
     <string name="cd_dropdown">Buka pilihan</string>
+    <string name="exp_beginner">Pemula</string>
+    <string name="exp_intermediate">Menengah</string>
+    <string name="exp_expert">Ahli</string>
 </resources>
