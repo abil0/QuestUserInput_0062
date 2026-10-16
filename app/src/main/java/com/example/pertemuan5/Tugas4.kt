@@ -61,3 +61,8 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
     )
     val fieldShape = RoundedCornerShape(dimensionResource(R.dimen.field_corner))
 
+    val formValid = namaDepan.isNotBlank() && namaBelakang.isNotBlank() &&
+            email.isNotBlank() && tglLahir.isNotBlank() && experience.isNotBlank() &&
+            (skillAndroid || skillUiux || skillWeb)
+
+
