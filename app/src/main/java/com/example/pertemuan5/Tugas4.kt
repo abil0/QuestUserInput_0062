@@ -118,3 +118,12 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                     shape = fieldShape,
                     modifier = Modifier.weight(1f)
                 )
+                OutlinedTextField(
+                    value = namaBelakang,
+                    onValueChange = { namaBelakang = it },
+                    label = { Text(stringResource(R.string.label_last_name)) },
+                    singleLine = true,
+                    shape = fieldShape,
+                    modifier = Modifier.weight(1f)
+                )
+            }
