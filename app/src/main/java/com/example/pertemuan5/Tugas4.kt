@@ -43,6 +43,5 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun FormBiodata(modifier: Modifier = Modifier) {
-
-}
+fun FormMahasiswa(modifier: Modifier = Modifier) {
+    var namaDepan by remember { mutableStateOf("") }
