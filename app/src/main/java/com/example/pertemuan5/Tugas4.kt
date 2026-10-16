@@ -139,3 +139,15 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_medium)))
 
+            Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.space_small))) {
+                OutlinedTextField(
+                    value = tglLahir,
+                    onValueChange = { tglLahir = it },
+                    label = { Text(stringResource(R.string.label_birth_date)) },
+                    singleLine = true,
+                    trailingIcon = {
+                        Icon(
+                            imageVector = Icons.Default.DateRange,
+                            contentDescription = stringResource(R.string.cd_calendar)
+                        )
+                    },
