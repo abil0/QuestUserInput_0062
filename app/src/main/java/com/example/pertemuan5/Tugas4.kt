@@ -194,3 +194,8 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                 fontSize = dimensionResource(R.dimen.text_label).value.sp,
                 fontWeight = FontWeight.Bold
             )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            )
