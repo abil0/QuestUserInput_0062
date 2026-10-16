@@ -198,4 +198,11 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
-            )
+            ){
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(checked = skillAndroid, onCheckedChange = { skillAndroid = it })
+                    Text(
+                        text = stringResource(R.string.skill_android),
+                        fontSize = dimensionResource(R.dimen.text_small).value.sp
+                    )
+                }
