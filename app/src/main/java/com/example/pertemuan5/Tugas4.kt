@@ -233,3 +233,15 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                     disabledContainerColor = colorResource(R.color.button_disabled),
                     disabledContentColor = colorResource(R.color.white)
                 ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(R.dimen.button_height))
+            ) {
+                Text(stringResource(R.string.button_proceed))
+            }
+        }
+    }
+}
+
+
+}
