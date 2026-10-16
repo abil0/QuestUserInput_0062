@@ -109,4 +109,12 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.space_medium)))
 
-
+            Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.space_small))) {
+                OutlinedTextField(
+                    value = namaDepan,
+                    onValueChange = { namaDepan = it },
+                    label = { Text(stringResource(R.string.label_first_name)) },
+                    singleLine = true,
+                    shape = fieldShape,
+                    modifier = Modifier.weight(1f)
+                )
