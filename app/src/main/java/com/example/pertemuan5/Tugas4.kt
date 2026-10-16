@@ -162,7 +162,25 @@ fun FormMahasiswa(modifier: Modifier = Modifier) {
                         label = { Text(stringResource(R.string.label_experience)) },
                         trailingIcon = {
                             IconButton(onClick = { showMenu = true }) {
-
+                                Icon(
+                                    imageVector = Icons.Default.ArrowDropDown,
+                                    contentDescription = stringResource(R.string.cd_dropdown)
+                                )
+                            }
+                        },
+                        shape = fieldShape,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    DropdownMenu(
+                        expanded = showMenu,
+                        onDismissRequest = { showMenu = false }
+                    ) {
+                        listExperience.forEach { item ->
+                            DropdownMenuItem(
+                                text = { Text(item) },
+                                onClick = {
+                                    experience = item
+                                    showMenu = false
                                 }
                             )
                         }
