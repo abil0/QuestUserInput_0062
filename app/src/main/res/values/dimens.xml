@@ -3,4 +3,14 @@
     <dimen name="padding_small">10dp</dimen>
     <dimen name="padding_medium">30dp</dimen>
     <dimen name="divider_tipis">1dp</dimen>
+    <?xml version="1.0" encoding="utf-8"?>
+    <dimen name="image_height">300dp</dimen>
+    <dimen name="card_corner">28dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="field_corner">24dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="space_small">8dp</dimen>
+    <dimen name="space_medium">16dp</dimen>
+    <dimen name="space_large">24dp</dimen>
+
 </resources>
